@@ -23,8 +23,8 @@ const userSchema = new mongoose.Schema({
     verificationToken : String,
     verificationTokenExpiry : Date,
 
-    resetToken : String,
-    resetTokenExpiry : Date,
+    passwordResetToken : String,
+    passwordResetExpires : Date,
 
     mfaEnabled : {
         type : Boolean,
@@ -34,6 +34,7 @@ const userSchema = new mongoose.Schema({
     mfaSecret : {
         type : String
     },
+    mfaSecretExpires : Date,
 
     createdAt : {
         type : Date,
